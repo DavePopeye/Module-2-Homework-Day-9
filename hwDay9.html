@@ -37,9 +37,9 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
         Use the specific bootstrap component to implement a Breadcrumb
         -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Home</li>
-        </ol>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Home</a>
+        </nav>
     </nav>
 
 
@@ -168,93 +168,98 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             <h1>J.Cole - 4 Your Eyez Only</h1>
             <table class="table table-dark">
                 <thead>
-                    <tr>
+                    <tr id="head">
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Length</th>
                         <th scope="col">
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btnHead btn-light">Delete</button>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr id="1">
                         <th scope="row">1</th>
                         <td>For Whom the Bell Tolls</td>
                         <td>2:08</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn1 btn-light">Delete</button>
                         </td>
         
                     </tr>
-                    <tr>
+                    <tr id="2">
                         <th scope="row">2</th>
                         <td>Immortal</td>
                         <td>3:20</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn2 btn-light">Delete</button>
                         </td>
         
                     </tr>
-                    <tr>
+                    <tr id="3">
                         <th scope="row">3</th>
                         <td>Deja Vu</td>
                         <td>4:26</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn3 btn-light">Delete</button>
                         </td>
                     </tr>
         
-                    <tr>
+                    <tr id="4">
                         <th scope="row">4</th>
                         <td>Ville Mentality</td>
                         <td>3:11</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn4 btn-light">Delete</button>
                         </td>
                     </tr>
         
-                    <tr>
+                    <tr id="5">
                         <th scope="row">5</th>
                         <td>She MIne, Pt 1</td>
                         <td>3:32</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn5 btn-light">Delete</button>
                         </td>
                     </tr>
         
-                    <tr>
+                    <tr id="6">
                         <th scope="row">6</th>
                         <td>Change</td>
                         <td>5:31</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn6 btn-light">Delete</button>
                         </td>
                     </tr>
         
-                    <tr>
+                    <tr id="7">
                         <th scope="row">7</th>
                         <td>Neighbors</td>
                         <td>3:37</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn7 btn-light">Delete</button>
                         </td>
                     </tr>
         
-                    <tr>
+                    <tr id="8">
                         <th scope="row">8</th>
                         <td>Foldin Clothes</td>
                         <td>5:17</td>
                         <td>
-                            <button type="button" class="btn btn-light">Delete</button>
+                            <button type="button" class="btn btn8 btn-light">Delete</button>
                         </td>
                     </tr>
         
                 </tbody>
             </table>
         </div>
+        <div class="container">
+            <div class="row justify-content-end my-5">
 
-
+                <button type="button" class="btn btn-dark">Add Track</button>
+            </div>
+        </div>
+       
     <!-- EXERCISE 6
             Add a DELETE bootstrap button on each row of the tracklist.
             Clicking on the button the row must disappear
@@ -269,6 +274,30 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
             - Text of the message
             Use the correct Bootstrap styles for styling the buttons
         -->
+        <footer>
+            <div class="container">
+                <h2>Contact Me</h2>
+                <div class="row">
+                    <div class="col col-6">
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1">Email address</label>
+                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                           
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Example textarea</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="col justify-content-center">
+                        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
 
     <!-- EXERCISE 8 
             Add to the footer an extra column with the same links of the top nav.
@@ -329,14 +358,64 @@ Could be the Amazon way, the Spotity or Apple music way or some other blog out t
         crossorigin="anonymous"></script>
     
     <script>
-        function deleteButton(){
-            let table = document.querySelector('tbody')
-            let row = document.querySelectorAll('tr')
-            for(let i = 0; i < row.length; i++){
-                
-            }
+    $(document).ready(function(){
+  $(".btnHead").click(function(){
+    $("#head").remove();
+  });
+});
 
-        }
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("#1").remove();
+  });
+});
+  
+$(document).ready(function(){
+  $(".btn2").click(function(){
+    $("#2").remove();
+  });
+});
+$(document).ready(function(){
+  $(".btn3").click(function(){
+    $("#3").remove();
+  });
+});
+  
+$(document).ready(function(){
+  $(".btn4").click(function(){
+    $("#4").remove();
+  });
+});
+  
+$(document).ready(function(){
+  $(".btn5").click(function(){
+    $("#5").remove();
+  });
+});
+  
+$(document).ready(function(){
+  $(".btn6").click(function(){
+    $("#6").remove();
+  });
+});
+$(document).ready(function(){
+  $(".btn7").click(function(){
+    $("#7").remove();
+  });
+});
+   
+$(document).ready(function(){
+  $(".btn8").click(function(){
+    $("#8").remove();
+  });
+});
+
+var mybutton = document.getElementById("myBtn");
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
     </script>
 </body>
 
